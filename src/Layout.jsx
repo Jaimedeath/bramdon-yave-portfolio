@@ -12,6 +12,12 @@ export default function Layout({ children }) {
         
         html {
           scroll-behavior: smooth;
+          lang: es-MX;
+        }
+        
+        body {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
         }
         
         ::-webkit-scrollbar {
