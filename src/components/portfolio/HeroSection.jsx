@@ -28,17 +28,19 @@ export default function HeroSection() {
       </div>
 
       <div className="max-w-5xl mx-auto text-center">
-        {/* Avatar / Initials */}
+        {/* Profile Photo */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, type: "spring" }}
-          className="mx-auto mb-8 w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-900 via-teal-600 to-amber-500 p-1 shadow-2xl shadow-blue-900/20"
+          className="mx-auto mb-8 w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-900 via-teal-600 to-amber-500 p-1 shadow-2xl shadow-blue-900/20"
         >
-          <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-            <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-900 via-teal-600 to-amber-500 bg-clip-text text-transparent">
-              BM
-            </span>
+          <div className="w-full h-full rounded-full overflow-hidden bg-white">
+            <img
+              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e0a37650439b91cacdf89/2d2cea5a2_Gemini_Generated_Image_ami8qoami8qoami8.png"
+              alt="Bramdon Yave Martínez Núñez"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
 
