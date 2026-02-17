@@ -6,14 +6,14 @@ import { Button } from "@/components/ui/button";
 const CV_URL = "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/user_6933991d02b58b87d1fd7b66/d1e92730e_CV_BYMNpdf_2025_9_232.pdf";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "by.martinez20@info.uas.edu.mx", href: "mailto:by.martinez20@info.uas.edu.mx", color: "#7EC8E3", bg: "#A8D8EA" },
-  { icon: Phone, label: "Teléfono", value: "667 411 5833", href: "tel:6674115833", color: "#C3B1E1", bg: "#D4C5F0" },
-  { icon: MapPin, label: "Ubicación", value: "Culiacán, Sinaloa, México", href: null, color: "#FFB347", bg: "#FFDAB9" },
+  { icon: Mail, label: "Email", value: "by.martinez20@info.uas.edu.mx", href: "mailto:by.martinez20@info.uas.edu.mx", color: "#1e3a8a", bg: "#dbeafe" },
+  { icon: Phone, label: "Teléfono", value: "667 411 5833", href: "tel:6674115833", color: "#0d9488", bg: "#ccfbf1" },
+  { icon: MapPin, label: "Ubicación", value: "Culiacán, Sinaloa, México", href: null, color: "#f59e0b", bg: "#fef3c7" },
 ];
 
 export default function ContactSection() {
   return (
-    <section id="contacto" className="py-24 px-4 bg-gradient-to-b from-transparent via-[#F8F9FA] to-transparent">
+    <section id="contacto" className="py-24 px-4 bg-gradient-to-b from-transparent via-white to-transparent">
       <div className="max-w-4xl mx-auto">
         {/* Section header */}
         <motion.div
@@ -22,14 +22,14 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-[#C3B1E1]">Contacto</span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2D3436] mt-2">
+          <span className="text-sm font-semibold uppercase tracking-widest text-teal-600">Contacto</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2">
             ¿Tienes un proyecto en mente?
           </h2>
-          <p className="text-[#636e72] mt-4 max-w-lg mx-auto">
+          <p className="text-slate-600 mt-4 max-w-lg mx-auto">
             Estoy disponible para nuevos proyectos de desarrollo web, software y consultoría tecnológica.
           </p>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#7EC8E3] via-[#C3B1E1] to-[#FFB347] mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-900 via-teal-600 to-amber-500 mx-auto mt-4 rounded-full" />
         </motion.div>
 
         {/* Contact cards */}
@@ -77,12 +77,12 @@ export default function ContactSection() {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#2D3436] to-[#3d4d50] p-8 md:p-12 text-center"
+          className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-blue-950 p-8 md:p-12 text-center"
         >
           {/* Decorative circles */}
-          <div className="absolute top-0 right-0 w-40 h-40 bg-[#7EC8E3]/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#C3B1E1]/10 rounded-full translate-y-1/2 -translate-x-1/2" />
-          <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-[#FFB347]/10 rounded-full" />
+          <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-32 h-32 bg-teal-500/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+          <div className="absolute top-1/2 right-1/4 w-20 h-20 bg-amber-500/10 rounded-full" />
 
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
@@ -94,7 +94,7 @@ export default function ContactSection() {
             <a href={CV_URL} target="_blank" rel="noopener noreferrer" download>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[#7EC8E3] to-[#C3B1E1] hover:from-[#6bb8d3] hover:to-[#b3a1d1] text-white rounded-full px-8 py-6 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-600 to-teal-500 hover:from-blue-500 hover:to-teal-400 text-white rounded-full px-8 py-6 text-base font-semibold shadow-lg transition-all duration-300 hover:shadow-xl"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Descargar CV en PDF

@@ -39,8 +39,8 @@ const education = [
 function TimelineItem({ item, index, isLeft }) {
   const isWork = item.type === "work";
   const Icon = isWork ? Briefcase : GraduationCap;
-  const color = isWork ? "#7EC8E3" : "#C3B1E1";
-  const bg = isWork ? "#A8D8EA" : "#D4C5F0";
+  const color = isWork ? "#1e3a8a" : "#0d9488";
+  const bg = isWork ? "#dbeafe" : "#ccfbf1";
 
   return (
     <motion.div
@@ -61,19 +61,19 @@ function TimelineItem({ item, index, isLeft }) {
       {/* Content */}
       <div className="flex-1 bg-white rounded-2xl border border-gray-100 p-5 shadow-sm hover:shadow-md transition-shadow duration-300">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-          <h3 className="text-base font-bold text-[#2D3436]">{item.title}</h3>
+          <h3 className="text-base font-bold text-slate-900">{item.title}</h3>
           <span
             className="text-xs font-semibold px-3 py-1 rounded-full"
-            style={{ backgroundColor: `${bg}40`, color }}
+            style={{ backgroundColor: `${bg}`, color }}
           >
             {item.period}
           </span>
         </div>
-        <p className="text-sm text-[#636e72] mb-3">{item.place}</p>
+        <p className="text-sm text-slate-600 mb-3">{item.place}</p>
         {item.details.length > 0 && (
           <ul className="space-y-1.5">
             {item.details.map((detail, i) => (
-              <li key={i} className="text-sm text-[#636e72] flex items-start gap-2">
+              <li key={i} className="text-sm text-slate-600 flex items-start gap-2">
                 <span className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{ backgroundColor: color }} />
                 {detail}
               </li>
@@ -96,17 +96,17 @@ export default function ExperienceSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="text-sm font-semibold uppercase tracking-widest text-[#7EC8E3]">Trayectoria</span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2D3436] mt-2">
+          <span className="text-sm font-semibold uppercase tracking-widest text-blue-900">Trayectoria</span>
+          <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mt-2">
             Experiencia & Educación
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#7EC8E3] via-[#C3B1E1] to-[#FFB347] mx-auto mt-4 rounded-full" />
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-900 via-teal-600 to-amber-500 mx-auto mt-4 rounded-full" />
         </motion.div>
 
         {/* Experience */}
         <div className="mb-12">
-          <h3 className="text-lg font-bold text-[#2D3436] mb-6 flex items-center gap-2">
-            <Briefcase className="w-5 h-5 text-[#7EC8E3]" />
+          <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+            <Briefcase className="w-5 h-5 text-blue-900" />
             Experiencia Profesional
           </h3>
           {experience.map((item, i) => (
@@ -116,8 +116,8 @@ export default function ExperienceSection() {
 
         {/* Education */}
         <div>
-          <h3 className="text-lg font-bold text-[#2D3436] mb-6 flex items-center gap-2">
-            <GraduationCap className="w-5 h-5 text-[#C3B1E1]" />
+          <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+            <GraduationCap className="w-5 h-5 text-teal-600" />
             Educación
           </h3>
           {education.map((item, i) => (

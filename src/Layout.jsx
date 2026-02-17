@@ -27,11 +27,11 @@ export default function Layout({ children }) {
           background: #F8F9FA;
         }
         ::-webkit-scrollbar-thumb {
-          background: #C3B1E1;
+          background: #0d9488;
           border-radius: 3px;
         }
         ::-webkit-scrollbar-thumb:hover {
-          background: #A8D8EA;
+          background: #1e3a8a;
         }
       `}</style>
       {children}

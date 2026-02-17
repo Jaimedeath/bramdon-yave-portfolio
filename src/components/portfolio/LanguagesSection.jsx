@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { Languages } from 'lucide-react';
 
 const languages = [
-  { name: "Español", level: "Nativo", percent: 100, color: "#7EC8E3" },
-  { name: "Inglés", level: "Intermedio B1", percent: 55, color: "#C3B1E1" },
+  { name: "Español", level: "Nativo", percent: 100, color: "#1e3a8a" },
+  { name: "Inglés", level: "Intermedio B1", percent: 55, color: "#0d9488" },
 ];
 
 const softSkills = [
@@ -28,15 +28,15 @@ export default function LanguagesSection() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"
           >
-            <h3 className="text-lg font-bold text-[#2D3436] mb-6 flex items-center gap-2">
-              <Languages className="w-5 h-5 text-[#7EC8E3]" />
+            <h3 className="text-lg font-bold text-slate-900 mb-6 flex items-center gap-2">
+              <Languages className="w-5 h-5 text-blue-900" />
               Idiomas
             </h3>
             <div className="space-y-5">
               {languages.map((lang, i) => (
                 <div key={lang.name}>
                   <div className="flex justify-between items-center mb-2">
-                    <span className="text-sm font-semibold text-[#2D3436]">{lang.name}</span>
+                    <span className="text-sm font-semibold text-slate-900">{lang.name}</span>
                     <span className="text-xs font-medium px-2.5 py-0.5 rounded-full" style={{ backgroundColor: `${lang.color}20`, color: lang.color }}>
                       {lang.level}
                     </span>
@@ -64,7 +64,7 @@ export default function LanguagesSection() {
             transition={{ delay: 0.1 }}
             className="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm"
           >
-            <h3 className="text-lg font-bold text-[#2D3436] mb-6">
+            <h3 className="text-lg font-bold text-slate-900 mb-6">
               Habilidades Blandas
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -77,9 +77,9 @@ export default function LanguagesSection() {
                   transition={{ delay: i * 0.08, type: "spring" }}
                   className="px-4 py-2 rounded-full text-sm font-medium border"
                   style={{
-                    backgroundColor: i % 3 === 0 ? '#A8D8EA15' : i % 3 === 1 ? '#C3B1E115' : '#FFB34715',
-                    borderColor: i % 3 === 0 ? '#A8D8EA40' : i % 3 === 1 ? '#C3B1E140' : '#FFB34740',
-                    color: i % 3 === 0 ? '#3a7ca5' : i % 3 === 1 ? '#7a5fa8' : '#c07b1e'
+                    backgroundColor: i % 3 === 0 ? '#dbeafe' : i % 3 === 1 ? '#ccfbf1' : '#fef3c7',
+                    borderColor: i % 3 === 0 ? '#93c5fd' : i % 3 === 1 ? '#5eead4' : '#fde68a',
+                    color: i % 3 === 0 ? '#1e3a8a' : i % 3 === 1 ? '#0d9488' : '#f59e0b'
                   }}
                 >
                   {skill}

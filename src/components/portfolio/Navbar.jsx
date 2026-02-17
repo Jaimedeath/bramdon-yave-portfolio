@@ -35,10 +35,10 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
           <a href="#inicio" className="flex items-center gap-2">
-            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#7EC8E3] via-[#C3B1E1] to-[#FFB347] flex items-center justify-center">
+            <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-900 via-teal-600 to-amber-500 flex items-center justify-center">
               <span className="text-white font-bold text-sm">BM</span>
             </div>
-            <span className="font-bold text-[#2D3436] hidden sm:inline">Bramdon Martínez</span>
+            <span className="font-bold text-slate-900 hidden sm:inline">Bramdon Martínez</span>
           </a>
 
           {/* Desktop links */}
@@ -47,7 +47,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-[#636e72] hover:text-[#2D3436] rounded-lg hover:bg-[#C3B1E1]/10 transition-all duration-200"
+                className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition-all duration-200"
               >
                 {link.name}
               </a>
@@ -59,7 +59,7 @@ export default function Navbar() {
             <a href={CV_URL} target="_blank" rel="noopener noreferrer" download className="hidden sm:block">
               <Button
                 size="sm"
-                className="bg-gradient-to-r from-[#7EC8E3] to-[#C3B1E1] hover:from-[#6bb8d3] hover:to-[#b3a1d1] text-white rounded-full px-5 text-sm font-medium shadow-sm"
+                className="bg-gradient-to-r from-blue-900 to-teal-600 hover:from-blue-800 hover:to-teal-500 text-white rounded-full px-5 text-sm font-medium shadow-sm"
               >
                 <Download className="w-4 h-4 mr-1.5" />
                 CV
@@ -90,13 +90,13 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 text-sm font-medium text-[#636e72] hover:text-[#2D3436] rounded-xl hover:bg-[#C3B1E1]/10 transition-all"
+                  className="block px-4 py-3 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-xl hover:bg-slate-100 transition-all"
                 >
                   {link.name}
                 </a>
               ))}
               <a href={CV_URL} target="_blank" rel="noopener noreferrer" download className="block mt-2">
-                <Button className="w-full bg-gradient-to-r from-[#7EC8E3] to-[#C3B1E1] text-white rounded-xl">
+                <Button className="w-full bg-gradient-to-r from-blue-900 to-teal-600 text-white rounded-xl">
                   <Download className="w-4 h-4 mr-2" />
                   Descargar CV
                 </Button>

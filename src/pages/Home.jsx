@@ -87,7 +87,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAFBFC]" id="inicio">
+    <div className="min-h-screen bg-slate-50" id="inicio">
       <Navbar />
       <HeroSection />
       <SkillsSection />
