@@ -106,26 +106,26 @@ export default function HeroSection() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.6, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-4 text-sm text-[#636e72] mb-10"
+          className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm text-slate-600 mb-8"
         >
           <span className="flex items-center gap-1.5">
-            <MapPin className="w-4 h-4 text-[#C3B1E1]" /> Culiacán, Sinaloa
+            <MapPin className="w-4 h-4 text-teal-600" /> Culiacán, Sinaloa
           </span>
           <span className="flex items-center gap-1.5">
-            <Mail className="w-4 h-4 text-[#7EC8E3]" /> by.martinez20@info.uas.edu.mx
+            <Mail className="w-4 h-4 text-blue-900" /> by.martinez20@info.uas.edu.mx
           </span>
           <span className="flex items-center gap-1.5">
-            <Phone className="w-4 h-4 text-[#FFB347]" /> 6674115833
-            </span>
-            </motion.div>
+            <Phone className="w-4 h-4 text-amber-600" /> 6674115833
+          </span>
+        </motion.div>
 
-            {/* CTA Buttons */}
-            <motion.div
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-              className="flex flex-wrap justify-center lg:justify-start gap-4"
-            >
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.7, duration: 0.5 }}
+          className="flex flex-wrap justify-center lg:justify-start gap-4"
+        >
           <a href={CV_URL} target="_blank" rel="noopener noreferrer" download>
             <Button
               size="lg"
@@ -143,8 +143,8 @@ export default function HeroSection() {
             >
               Ver Proyectos
             </Button>
-            </a>
-            </motion.div>
+          </a>
+        </motion.div>
           </div>
         </div>
       </div>
