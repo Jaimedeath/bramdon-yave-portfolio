@@ -53,8 +53,8 @@ export default function ContactSection() {
                   >
                     <item.icon className="w-6 h-6" style={{ color: item.color }} />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#636e72] mb-1">{item.label}</p>
-                  <p className="text-sm font-semibold text-[#2D3436]">{item.value}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">{item.label}</p>
+                  <p className="text-sm font-semibold text-slate-900">{item.value}</p>
                 </a>
               ) : (
                 <div className="bg-white rounded-2xl border border-gray-100 p-6 text-center shadow-sm">
@@ -64,8 +64,8 @@ export default function ContactSection() {
                   >
                     <item.icon className="w-6 h-6" style={{ color: item.color }} />
                   </div>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#636e72] mb-1">{item.label}</p>
-                  <p className="text-sm font-semibold text-[#2D3436]">{item.value}</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1">{item.label}</p>
+                  <p className="text-sm font-semibold text-slate-900">{item.value}</p>
                 </div>
               )}
             </motion.div>
