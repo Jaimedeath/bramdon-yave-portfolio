@@ -27,44 +27,54 @@ export default function HeroSection() {
         />
       </div>
 
-      <div className="max-w-5xl mx-auto text-center">
-        {/* Profile Photo */}
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.6, type: "spring" }}
-          className="mx-auto mb-8 w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-900 via-teal-600 to-amber-500 p-1 shadow-2xl shadow-blue-900/20"
-        >
-          <div className="w-full h-full rounded-full overflow-hidden bg-white">
-            <img
-              src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e0a37650439b91cacdf89/2d2cea5a2_Gemini_Generated_Image_ami8qoami8qoami8.png"
-              alt="Bramdon Yave Martínez Núñez"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </motion.div>
+      <div className="max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          {/* Profile Photo */}
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, type: "spring" }}
+            className="flex-shrink-0"
+          >
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-900 via-teal-600 to-amber-500 p-1.5 shadow-2xl shadow-blue-900/30 rotate-3">
+                <div className="w-full h-full rounded-3xl overflow-hidden bg-white">
+                  <img
+                    src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/698e0a37650439b91cacdf89/2d2cea5a2_Gemini_Generated_Image_ami8qoami8qoami8.png"
+                    alt="Bramdon Yave Martínez Núñez"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              {/* Decorative dot pattern */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-500/20 rounded-full blur-2xl -z-10" />
+              <div className="absolute -top-4 -left-4 w-32 h-32 bg-teal-500/20 rounded-full blur-2xl -z-10" />
+            </div>
+          </motion.div>
 
-        {/* Name */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-        >
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 mb-2">
-            Bramdon Yave
-          </h1>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-blue-900 via-teal-600 to-amber-500 bg-clip-text text-transparent mb-6">
-            Martínez Núñez
-          </h1>
-        </motion.div>
+          {/* Content */}
+          <div className="flex-1 text-center lg:text-left">
+            {/* Name */}
+            <motion.div
+              initial={{ y: 30, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-slate-900 mb-2">
+                Bramdon Yave
+              </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-blue-900 via-teal-600 to-amber-500 bg-clip-text text-transparent mb-6">
+                Martínez Núñez
+              </h1>
+            </motion.div>
 
-        {/* Title badge */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-8"
-        >
+            {/* Title badge */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4, duration: 0.5 }}
+              className="flex flex-wrap justify-center lg:justify-start gap-3 mb-6"
+            >
           {["Desarrollador Web", "Desarrollador de Software", "Sistemas POS", "Ciberseguridad"].map((tag, i) => (
             <span
               key={tag}
@@ -77,16 +87,16 @@ export default function HeroSection() {
             >
               {tag}
             </span>
-          ))}
-        </motion.div>
+              ))}
+            </motion.div>
 
-        {/* Description */}
-        <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
-          className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-6 leading-relaxed"
-        >
+            {/* Description */}
+            <motion.p
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="text-base md:text-lg text-slate-600 mb-6 leading-relaxed"
+            >
           Profesional de la informática con amplios conocimientos en redes, sistemas operativos y software.
           Apasionado por crear soluciones tecnológicas eficientes y seguras que impulsen la innovación.
         </motion.p>
@@ -106,16 +116,16 @@ export default function HeroSection() {
           </span>
           <span className="flex items-center gap-1.5">
             <Phone className="w-4 h-4 text-[#FFB347]" /> 6674115833
-          </span>
-        </motion.div>
+            </span>
+            </motion.div>
 
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 0.5 }}
+              className="flex flex-wrap justify-center lg:justify-start gap-4"
+            >
           <a href={CV_URL} target="_blank" rel="noopener noreferrer" download>
             <Button
               size="lg"
@@ -133,8 +143,10 @@ export default function HeroSection() {
             >
               Ver Proyectos
             </Button>
-          </a>
-        </motion.div>
+            </a>
+            </motion.div>
+          </div>
+        </div>
       </div>
 
       {/* Scroll indicator */}
